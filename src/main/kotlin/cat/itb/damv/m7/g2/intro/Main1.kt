@@ -1,3 +1,5 @@
+package cat.itb.damv.m7.g2.intro
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -6,31 +8,21 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 
 /*
- * El mateix, però afegint al ListJoiner un mètode per a multiplicar
+ * Fer una classe que gestiona un parell de llistes
+ * Afegir a la classe un mètode per sumar els parells de números de cada posició
+ * Per exemple: per a 1,2,3, i 4,5,6, el resultat serà 5,7,9
  */
 
 @Composable
-fun app2() {
+fun app1() {
 
     //La classe
     class ListJoiner(private val list1: List<Int>, private val list2: List<Int>) {
-
-        //Mètode per a sumar
         fun sumLists(): List<Int> {
             val length = minOf(list1.size, list2.size)
             val result = mutableListOf<Int>()
             for (i in 0 until length) {
                 result.add(list1[i] + list2[i])
-            }
-            return result
-        }
-
-        //Mètode per a multiplicar
-        fun multLists(): List<Int> {
-            val length = minOf(list1.size, list2.size)
-            val result = mutableListOf<Int>()
-            for (i in 0 until length) {
-                result.add(list1[i] * list2[i])
             }
             return result
         }
@@ -41,8 +33,6 @@ fun app2() {
     val list2 = listOf(4, 5, 6)
     val listJoiner = ListJoiner(list1, list2)
     //Cridar al mètode de sumar de ListJoiner per obtenir la tercera llista
-    //val joinedList = listJoiner.sumLists()
-    //Cridar al mètode de multiplicar de ListJoiner per obtenir la tercera llista
     val joinedList = listJoiner.sumLists()
 
     //Per cada string de la llista, crear un component Text, que anirà dintre d'un column
@@ -57,7 +47,7 @@ fun app2() {
 
 fun main() = application {
     Window(onCloseRequest = ::exitApplication) {
-        app2()
+        app1()
     }
 }
 

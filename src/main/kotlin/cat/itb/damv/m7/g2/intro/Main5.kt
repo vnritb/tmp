@@ -1,3 +1,5 @@
+package cat.itb.damv.m7.g2.intro
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
