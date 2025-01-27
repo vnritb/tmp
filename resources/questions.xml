@@ -1,0 +1,441 @@
+<test>
+    <!-- Pregunta 1 -->
+    <pregunta numero="1">
+        <enunciado>Quina d'aquestes opcions representa una lambda en Kotlin?</enunciado>
+        <feedback>Una lambda en Kotlin es defineix amb la sintaxi { paràmetres -> codi }. Altres maneres com `fun()` o `object` són formes d'altres tipus d'estructures i no lambdes.</feedback>
+        <respuesta correcta="false">
+            <opcion>fun() {} // No és una lambda</opcion>
+            <feedback>Aquesta és una funció normal i no segueix la definició d'una lambda.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>object {} // No és una lambda</opcion>
+            <feedback>Aquesta declaració crea un objecte i no és una lambda.</feedback>
+        </respuesta>
+        <respuesta correcta="true">
+            <opcion>{ x -> x + 1 } // És una lambda</opcion>
+            <feedback>Correcte! Aquesta és la sintaxi estàndard per a una lambda en Kotlin.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>val x = fun() {} // No és una lambda</opcion>
+            <feedback>Aquesta és una funció anònima, que no coincideix amb la sintaxi d'una lambda.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 2 -->
+    <pregunta numero="2">
+        <enunciado>Quina és una característica important de les lambdes en Kotlin?</enunciado>
+        <feedback>Les lambdes són expressions lleugeres i es poden passar com arguments de funcions, permetent escriure codi més concís.</feedback>
+        <respuesta correcta="false">
+            <opcion>Són únicament per definir classes</opcion>
+            <feedback>No, les lambdes no són una estructura per definir classes.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>No es poden passar com a paràmetres</opcion>
+            <feedback>Això és incorrecte, les lambdes són sovint passades com a paràmetres.</feedback>
+        </respuesta>
+        <respuesta correcta="true">
+            <opcion>Implementen codi que executarà altra funció</opcion>
+            <feedback>Correcte! Les lambdes s'utilitzen per implementar codi que altres funcions poden executar.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Requereixen sempre la paraula reservada 'fun'</opcion>
+            <feedback>No, les lambdes no utilitzen la paraula reservada `fun`.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 3 -->
+    <pregunta numero="3">
+        <enunciado>Quina és la sintaxi correcta per cridar una funció que accepta una lambda?</enunciado>
+        <feedback>La sintaxi típica per passar lambdes com a argument a una funció és `nomFunció { paràmetres -> cos }`. Altres sintaxis incorrectes, com l'ús de `[]`, són errors freqüents dels desenvolupadors.</feedback>
+        <respuesta correcta="true">
+            <opcion>miFuncion { println(it) }</opcion>
+            <feedback>Correcte! Aquesta és la sintaxi adequada per passar una lambda a una funció.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>miFuncion [ x -> println(x) ]</opcion>
+            <feedback>Incorrecte. Els claudàtors `[]` no són vàlids en Kotlin per definir lambdes.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>miFuncion (x => x * x)</opcion>
+            <feedback>Aquesta sintaxi és pròpia de JavaScript, no de Kotlin.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>miFuncion { -> it }</opcion>
+            <feedback>Aquesta sintaxi no és vàlida perquè el paràmetre no s'ha definit correctament.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 4 -->
+    <pregunta numero="4">
+        <enunciado>Què representa el paràmetre "it" d'una lambda en Kotlin?</enunciado>
+        <feedback>En Kotlin, "it" és un paràmetre implícit utilitzat com a referència al primer paràmetre quan no el definim explícitament en una lambda.</feedback>
+        <respuesta correcta="false">
+            <opcion>Una paraula reservada per referenciar variables globals</opcion>
+            <feedback>"It" no està relacionat amb variables globals, només actua al context d'una lambda.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>El nom de qualsevol paràmetre d'una funció</opcion>
+            <feedback>"It" només es refereix a paràmetres de lambdes específiques amb un sol argument.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>El nom propietari del paquet</opcion>
+            <feedback>No té cap relació amb els paquets o noms d'espais.</feedback>
+        </respuesta>
+        <respuesta correcta="true">
+            <opcion>El paràmetre únic d'una lambda quan no es declara explícitament</opcion>
+            <feedback>Correcte! "It" és només vàlid quan una lambda té un sol argument i no s'ha declarat un nom explícit.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 5 -->
+    <pregunta numero="5">
+        <enunciado>A quin lloc es defineix generalment una lambda?</enunciado>
+        <feedback>En Kotlin, és habitual definir lambdes com a arguments de funcions d'extensió, en col·leccions o directament en assignacions de variables.</feedback>
+        <respuesta correcta="true">
+            <opcion>Com a paràmetre d'entrada d'una funció</opcion>
+            <feedback>Correcte! Aquesta és una de les ubicacions més comunes per utilitzar lambdes.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Només a la declaració d'una classe</opcion>
+            <feedback>Les lambdes no es limiten només als contextos de classe.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Als fitxers globals exclusivament</opcion>
+            <feedback>Aquesta declaració és incorrecta. Les lambdes es poden utilitzar a qualsevol context adequat.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Sempre dins d'una interfície</opcion>
+            <feedback>Tot i que poden usar-se dins d'interfícies, les lambdes no estan limitades a aquest ús.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 6 -->
+    <pregunta numero="6">
+        <enunciado>Com es simplifica una crida a una lambda que té un sol paràmetre?</enunciado>
+        <feedback>En Kotlin, quan una lambda té només un paràmetre, no cal declarar-lo explícitament. Es pot accedir directament al paràmetre mitjançant "it". Això fa que el codi sigui més concís.</feedback>
+        <respuesta correcta="false">
+            <opcion>Utilitzant la paraula "this"</opcion>
+            <feedback>Incorrecte. "This" es refereix al context de l'objecte, no al paràmetre de la lambda.</feedback>
+        </respuesta>
+        <respuesta correcta="true">
+            <opcion>Utilitzant "it" per accedir al paràmetre</opcion>
+            <feedback>Correcte! Utilitzar "it" és una manera simplificada d'accedir al paràmetre únic d'una lambda.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Declarant explícitament els paràmetres sempre</opcion>
+            <feedback>No cal declarar explícitament el paràmetre si hi ha només un i podem fer servir "it".</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Renunciant als paràmetres</opcion>
+            <feedback>Això no té sentit, ja que les lambdes necessiten almenys una referència per accedir al paràmetre.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 7 -->
+    <pregunta numero="7">
+        <enunciado>Quina de les següents característiques es correspon a les d'una lambda amb més d'un paràmetre?</enunciado>
+        <feedback>Quan hi ha més d'un paràmetre en una lambda, és obligatori declarar-los explícitament, ja que "it" només funciona per un sol paràmetre.</feedback>
+        <respuesta correcta="true">
+            <opcion>Els paràmetres han de ser declarats explícitament</opcion>
+            <feedback>Correcte! Per una lambda amb diversos paràmetres, s'ha de declarar cada un explícitament, com ara `{ x, y -> x + y }`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Només s'utilitza "it" per passar tots els valors</opcion>
+            <feedback>Incorrecte. "It" només funciona amb un sol paràmetre.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>La sintaxi { it, it -> it } és vàlida</opcion>
+            <feedback>Aquesta sintaxi és incorrecta, ja que "it" no pot ser utilitzat per múltiples paràmetres.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Les lambdes només poden tenir un paràmetre</opcion>
+            <feedback>Aquesta afirmació no és certa, les lambdes poden tenir diversos paràmetres si es declaren explícitament.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 8 -->
+    <pregunta numero="8">
+        <enunciado>Quin avantatge té Kotlin amb les lambdes respecte a Java?</enunciado>
+        <feedback>A diferència de Java, Kotlin permet una sintaxi més compacta i fàcil d'utilitzar per treballar amb lambdes, com l'ordre en el qual es defineixen o la possibilitat de passar-les fora dels parèntesis.</feedback>
+        <respuesta correcta="false">
+            <opcion>Kotlin elimina l'ús de lambdes a favor de les funcions abstractes</opcion>
+            <feedback>Incorrecte. Kotlin potencia l'ús de lambdes i no prefereix funcions abstractes.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Kotlin només accepta lambdes sense paràmetres</opcion>
+            <feedback>No. Kotlin permet lambdes amb cap, un o més paràmetres.</feedback>
+        </respuesta>
+        <respuesta correcta="true">
+            <opcion>Kotlin permet una sintaxi més concisa gràcies a l'ordre de les lambdes</opcion>
+            <feedback>Correcte! Kotlin introdueix moltes optimitzacions per fer el treball amb lambdes més eficient, com l'ordre dels paràmetres o l'ús de `it`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Les lambdes sempre es defineixen dins de classes abstractes</opcion>
+            <feedback>Això no és correcte, ja que les lambdes poden definir-se a qualsevol lloc on sigui necessari.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 9 -->
+    <pregunta numero="9">
+        <enunciado>Com es pot definir una lambda explícita amb dos paràmetres?</enunciado>
+        <feedback>Les lambdes que tenen més d'un paràmetre en Kotlin han de declarar explícitament els noms dels paràmetres i utilitzen la sintaxi `{ param1, param2 -> ... }`.</feedback>
+        <respuesta correcta="true">
+            <opcion>{ x: Int, y: Int -> x + y }</opcion>
+            <feedback>Correcte! Aquesta és la sintaxi adequada per a una lambda amb dos paràmetres.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>{ x: Int; y: Int => x + y }</opcion>
+            <feedback>Syntax incorrecta. No es poden utilitzar punts i comes ni fletxes tipus `=>` en Kotlin.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>x, y -> x + y</opcion>
+            <feedback>Falta el bloc `{}` que delimita la lambda. Aquesta declaració és incompleta.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>(x, y) -> x + y</opcion>
+            <feedback>Aquesta sintaxi és pròpia de JavaScript, no de Kotlin.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 10 -->
+    <pregunta numero="10">
+        <enunciado>Quina diferència hi ha entre lambdes i funcions anònimes a Kotlin?</enunciado>
+        <feedback>Les lambdes i les funcions anònimes són similars però tenen diferències clau: les lambdes no poden fer servir "return" explícit tret que siguin inline, mentre que les funcions anònimes sí.</feedback>
+        <respuesta correcta="true">
+            <opcion>Les funcions anònimes poden usar "return", les lambdes no</opcion>
+            <feedback>Correcte! Les funcions anònimes poden utilitzar "return", mentre que les lambdes només poden fer-ho quan són inline.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Totes dues són idèntiques</opcion>
+            <feedback>No. Tot i que semblants, tenen diferències importants com l'ús de "return".</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Només es poden fer servir lambdes en funcions</opcion>
+            <feedback>No és cert. Les lambdes no estan limitades a funcions únicament.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>No es poden retenir referències de lambdes</opcion>
+            <feedback>Aquesta afirmació és incorrecta, ja que les lambdes poden ser assignades a variables i reutilitzades.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 11 -->
+    <pregunta numero="11">
+        <enunciado>Com s'utilitza una lambda per a filtrar una llista en Kotlin?</enunciado>
+        <feedback>La funció `filter` s'utilitza per aplicar lambdes que determinen si un element d’una llista ha de ser seleccionat o no. La lambda retorna un booleà i els elements que compleixen la condició s'inclouen al resultat.</feedback>
+        <respuesta correcta="true">
+            <opcion>llista.filter { it > 5 }</opcion>
+            <feedback>Correcte! Aquesta lambda filtra els elements de la llista que són més grans que 5.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>llista.map { it > 5 }</opcion>
+            <feedback>Incorrecte! `map` es fa servir per transformar els elements, no per filtrar-los.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>llista.reduce { acc, it -> acc + it }</opcion>
+            <feedback>Incorrecte! `reduce` combina els elements d'una col·lecció en base a una lambda, però no filtra.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>llista.sortBy { it }</opcion>
+            <feedback>Incorrecte! `sortBy` ordena els elements segons un criteri, però no filtra una col·lecció.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 12 -->
+    <pregunta numero="12">
+        <enunciado>Què fa la funció `map` sobre una llista en Kotlin?</enunciado>
+        <feedback>La funció `map` transforma cada element d'una llista en un altre mitjançant l'aplicació d'una lambda. Aquesta operació no altera la mida de la llista i crea una nova llista amb els elements transformats.</feedback>
+        <respuesta correcta="true">
+            <opcion>Transforma cada element segons una lambda</opcion>
+            <feedback>Correcte! `map` aplica la lambda a cadascun dels elements de la llista.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Filtra els elements segons una condició</opcion>
+            <feedback>Incorrecte! Aquesta funcionalitat correspon a `filter`, no a `map`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Combina tots els elements en un únic valor</opcion>
+            <feedback>Incorrecte! Això ho fa la funció `reduce`, no `map`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Ordena els elements segons un criteri</opcion>
+            <feedback>Incorrecte! Aquesta és la funció `sortBy` o `sorted`, no `map`.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 13 -->
+    <pregunta numero="13">
+        <enunciado>Com es pot accedir als índexs d’una llista mentre s'itera sobre ella?</enunciado>
+        <feedback>Kotlin permet accedir tant als índexs com als valors d'una llista mitjançant la funció `forEachIndexed`, on la lambda té dos paràmetres: l’índex i l’element actual.</feedback>
+        <respuesta correcta="true">
+            <opcion>llista.forEachIndexed { index, value -> }</opcion>
+            <feedback>Correcte! Aquesta funció permet accedir tant a l'índex com al valor mentre s'itera sobre la llista.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>llista.forEach { index, value -> }</opcion>
+            <feedback>Incorrecte! `forEach` només passa els valors, no els índexs.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>llista.mapIndexed { index, value -> }</opcion>
+            <feedback>Incorrecte! Tot i que permet accedir als índexs, `mapIndexed` s'utilitza per transformar elements, no per iterar sense retorn.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>for (index, value in llista)</opcion>
+            <feedback>Incorrecte! Aquesta no és la sintaxi correcta per iterar amb índexs i valors en Kotlin.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 14 -->
+    <pregunta numero="14">
+        <enunciado>Què retorna la funció `filter` quan s'aplica sobre una llista?</enunciado>
+        <feedback>La funció `filter` retorna una nova llista que conté només els elements de l’entrada que compleixen la condició definida per la lambda.</feedback>
+        <respuesta correcta="true">
+            <opcion>Una nova llista amb els elements que compleixen la condició</opcion>
+            <feedback>Correcte! `filter` retorna elements seleccionats en una nova llista.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Tots els elements originals de la llista</opcion>
+            <feedback>Incorrecte! Només els elements que compleixen la condició són retornats.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Un únic valor calculat</opcion>
+            <feedback>Incorrecte! Aquest seria el cas d'una funció com `reduce` o `fold`, no `filter`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>La llista ordenada segons un criteri</opcion>
+            <feedback>Incorrecte! Aquesta funcionalitat correspon a funcions com `sorted` o `sortBy`.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 15 -->
+    <pregunta numero="15">
+        <enunciado>Com es defineix una funció lambda a una variable?</enunciado>
+        <feedback>Les lambdes poden ser assignades a variables utilitzant una sintaxi clara i sense necessitar declarar explícitament el tipus sempre que es pugui inferir.</feedback>
+        <respuesta correcta="true">
+            <opcion>val lambda = { x: Int -> x * x }</opcion>
+            <feedback>Correcte! Aquesta és la manera adequada d'assignar una lambda a una variable.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>val lambda(x: Int): Int = x * x</opcion>
+            <feedback>Incorrecte! Aquesta sintaxi no és vàlida per definir lambdes.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>fun lambda(x: Int): Int { return x * x }</opcion>
+            <feedback>Incorrecte! Això defineix una funció, no una lambda assignada a una variable.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>lambda x = { x -> x * x }</opcion>
+            <feedback>Aquesta sintaxi no és vàlida en Kotlin.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 16 -->
+    <pregunta numero="16">
+        <enunciado>Què fa la funció `reduce` quan s'aplica a una llista?</enunciado>
+        <feedback>La funció `reduce` agrega els elements d'una col·lecció en un únic valor combinant-los successivament en base a una lambda.</feedback>
+        <respuesta correcta="true">
+            <opcion>Combina els elements en un únic valor</opcion>
+            <feedback>Correcte! `reduce` aplica una lambda per agregar tots els elements en un únic resultat.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Filtra els elements segons una condició</opcion>
+            <feedback>Incorrecte! Aquesta funcionalitat correspon a la funció `filter`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Transforma cada element de la llista</opcion>
+            <feedback>Incorrecte! Aquesta és la funció `map`, no `reduce`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Retorna tots els elements en un ordre diferent</opcion>
+            <feedback>Incorrecte! Aquesta funcionalitat correspon a funcions com `sorted` o `reversed`.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 17 -->
+    <pregunta numero="17">
+        <enunciado>Amb quina paraula reservada es pot interrompre l'execució d'una lambda?</enunciado>
+        <feedback>Quan cal interrompre l'execució d'una lambda, es pot utilitzar la paraula reservada `return`, però només dins de funcions `inline`; a fora d'aquest context, genera un error.</feedback>
+        <respuesta correcta="true">
+            <opcion>return</opcion>
+            <feedback>Correcte! `return` s’utilitza per interrompre lambdes, però només en context inline.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>break</opcion>
+            <feedback>Incorrecte! `break` no pot ser usat per sortir d'una lambda.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>continue</opcion>
+            <feedback>Incorrecte! `continue` no interromp lambdes, sinó iteracions de bucles.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>stop</opcion>
+            <feedback>No existeix la paraula reservada `stop` a Kotlin.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 18 -->
+    <pregunta numero="18">
+        <enunciado>Quan s'hauria d'utilitzar una funció anònima en lloc d'una lambda?</enunciado>
+        <feedback>S'aconsella utilitzar funcions anònimes quan hi ha la necessitat d'un "return" prematur, ja que les lambdes no permeten aquest comportament tret que siguin inline.</feedback>
+        <respuesta correcta="true">
+            <opcion>Quan cal fer servir "return" per sortir de la funció</opcion>
+            <feedback>Correcte! Les funcions anònimes permeten l'ús de "return" per interrompre la seva execució.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Quan no es vol assignar cap funció a una variable</opcion>
+            <feedback>Incorrecte! Aquest no és un motiu per triar una funció anònima en lloc d'una lambda.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Quan es necessiten múltiples paràmetres</opcion>
+            <feedback>Incorrecte! Les lambdes també poden tenir múltiples paràmetres.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>No hi ha cap diferència, es poden fer servir indistintament</opcion>
+            <feedback>Aquesta afirmació és incorrecta, ja que hi ha diferències clares entre funcions anònimes i lambdes.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 19 -->
+    <pregunta numero="19">
+        <enunciado>Què fa la funció `sorted` en una llista?</enunciado>
+        <feedback>La funció `sorted` realitza un ordenament natural dels elements de la llista i retorna una nova llista amb aquest ordre.</feedback>
+        <respuesta correcta="true">
+            <opcion>Ordena els elements d'una llista</opcion>
+            <feedback>Correcte! `sorted` ordena els elements d'una col·lecció i retorna una llista ordenada.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Filtra els elements que són nul·ls</opcion>
+            <feedback>Incorrecte! Aquesta funcionalitat correspon a la funció `filterNotNull`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Retorna el primer element de la llista</opcion>
+            <feedback>Incorrecte! Aquesta funcionalitat correspon a `first` o `firstOrNull`.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Combina tots els elements en un únic valor</opcion>
+            <feedback>Incorrecte! Això és responsabilitat de funcions com `reduce` o `fold`.</feedback>
+        </respuesta>
+    </pregunta>
+
+    <!-- Pregunta 20 -->
+    <pregunta numero="20">
+        <enunciado>Com es retorna un valor d'una funció anònima?</enunciado>
+        <feedback>A diferència de les lambdes, que no poden utilitzar la paraula `return` tret que siguin inline, una funció anònima pot utilitzar-la directament per tornar valors.</feedback>
+        <respuesta correcta="true">
+            <opcion>Utilitzant la paraula "return"</opcion>
+            <feedback>Correcte! Les funcions anònimes poden fer servir "return" per tornar valors, ja que tenen el seu propi context.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Utilitzant "break"</opcion>
+            <feedback>Incorrecte. "Break" només s'utilitza per sortir d'un bucle, no per tornar valors.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>Utilitzant "continue"</opcion>
+            <feedback>Incorrecte. "Continue" s'utilitza per passar a la següent iteració d'un bucle.</feedback>
+        </respuesta>
+        <respuesta correcta="false">
+            <opcion>No es pot retornar d'una funció anònima</opcion>
+            <feedback>Això és incorrecte. Les funcions anònimes poden retornar valors com qualsevol altra funció.</feedback>
+        </respuesta>
+    </pregunta>
+</test>
